@@ -1,6 +1,6 @@
 pkg/ciscobcsgen
 cmd/codegen-cli
-bcs-cli
+dist/
 *.jsonl
 *.json
 bcs_bulk.jsonl
