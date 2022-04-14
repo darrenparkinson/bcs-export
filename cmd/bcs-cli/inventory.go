@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/darrenparkinson/bcs-export/pkg/ciscobcs"
 	"github.com/fatih/color"
 	"github.com/rodaine/table"
 	"github.com/urfave/cli/v2"
-	"gitlab.com/darrenparkinson/bcs-export/pkg/ciscobcs"
 )
 
 func listDevices(c *cli.Context) error {

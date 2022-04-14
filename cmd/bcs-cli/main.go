@@ -8,11 +8,11 @@ import (
 	"os"
 	"time"
 
+	"github.com/darrenparkinson/bcs-export/internal/helpers"
+	"github.com/darrenparkinson/bcs-export/pkg/ciscobcs"
 	"github.com/joho/godotenv"
 	"github.com/rs/zerolog"
 	"github.com/urfave/cli/v2"
-	"gitlab.com/darrenparkinson/bcs-export/internal/helpers"
-	"gitlab.com/darrenparkinson/bcs-export/pkg/ciscobcs"
 	"gorm.io/gorm"
 )
 

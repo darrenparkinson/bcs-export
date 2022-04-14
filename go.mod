@@ -1,4 +1,4 @@
-module gitlab.com/darrenparkinson/bcs-export
+module github.com/darrenparkinson/bcs-export
 
 go 1.18
 
