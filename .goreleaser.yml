@@ -1,0 +1,22 @@
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: ./cmd/bcs-cli
+    id: "cli"
+    binary: bcs-cli
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+archives:
+  - format: binary
+changelog:
+  sort: asc
+checksum:
+  disable: true
