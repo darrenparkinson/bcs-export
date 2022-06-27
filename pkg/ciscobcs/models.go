@@ -61,6 +61,14 @@ func (d Date) String() string {
 	return d.Time.Format(DateFormat)
 }
 
+// Value is used by gorm to get a time.Time back instead of a Cisco Date.
+func (d *Date) Value() (driver.Value, error) {
+	if d == nil {
+		return nil, nil
+	}
+	return d.Time, nil
+}
+
 // DateTimeMinusTimezoneFormat represents the datetime field provided in the Cisco results which
 // they have chosen not to provide any timezone information for.
 const DateTimeMinusTimezoneFormat = "2006-01-02T15:04:05"

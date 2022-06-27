@@ -481,6 +481,16 @@ func TestCBPSummary_GetTotalDevices(tt *testing.T) {
 	c.GetTotalDevices()
 }
 
+func TestContractBasePID_GetBasePid(tt *testing.T) {
+	var zeroValue string
+	c := &ContractBasePID{BasePid: &zeroValue}
+	c.GetBasePid()
+	c = &ContractBasePID{}
+	c.GetBasePid()
+	c = nil
+	c.GetBasePid()
+}
+
 func TestDevice_GetCollector(tt *testing.T) {
 	var zeroValue string
 	d := &Device{Collector: &zeroValue}
@@ -1163,6 +1173,56 @@ func TestListOptions_GetPerPage(tt *testing.T) {
 	l.GetPerPage()
 }
 
+func TestOrderablePid_GetItemDescription(tt *testing.T) {
+	var zeroValue string
+	o := &OrderablePid{ItemDescription: &zeroValue}
+	o.GetItemDescription()
+	o = &OrderablePid{}
+	o.GetItemDescription()
+	o = nil
+	o.GetItemDescription()
+}
+
+func TestOrderablePid_GetItemPosition(tt *testing.T) {
+	var zeroValue string
+	o := &OrderablePid{ItemPosition: &zeroValue}
+	o.GetItemPosition()
+	o = &OrderablePid{}
+	o.GetItemPosition()
+	o = nil
+	o.GetItemPosition()
+}
+
+func TestOrderablePid_GetItemType(tt *testing.T) {
+	var zeroValue string
+	o := &OrderablePid{ItemType: &zeroValue}
+	o.GetItemType()
+	o = &OrderablePid{}
+	o.GetItemType()
+	o = nil
+	o.GetItemType()
+}
+
+func TestOrderablePid_GetOrderablePid(tt *testing.T) {
+	var zeroValue string
+	o := &OrderablePid{OrderablePid: &zeroValue}
+	o.GetOrderablePid()
+	o = &OrderablePid{}
+	o.GetOrderablePid()
+	o = nil
+	o.GetOrderablePid()
+}
+
+func TestOrderablePid_GetPillarCode(tt *testing.T) {
+	var zeroValue string
+	o := &OrderablePid{PillarCode: &zeroValue}
+	o.GetPillarCode()
+	o = &OrderablePid{}
+	o.GetPillarCode()
+	o = nil
+	o.GetPillarCode()
+}
+
 func TestSecurityAdvisory_GetDeviceId(tt *testing.T) {
 	var zeroValue int
 	s := &SecurityAdvisory{DeviceId: &zeroValue}
@@ -1338,6 +1398,170 @@ func TestSecurityAdvisoryBulletin_GetSir(tt *testing.T) {
 	s.GetSir()
 	s = nil
 	s.GetSir()
+}
+
+func TestSerialNumberDetails_GetBasePidList(tt *testing.T) {
+	var zeroValue []ContractBasePID
+	s := &SerialNumberDetails{BasePidList: &zeroValue}
+	s.GetBasePidList()
+	s = &SerialNumberDetails{}
+	s.GetBasePidList()
+	s = nil
+	s.GetBasePidList()
+}
+
+func TestSerialNumberDetails_GetContractSiteAddress1(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ContractSiteAddress1: &zeroValue}
+	s.GetContractSiteAddress1()
+	s = &SerialNumberDetails{}
+	s.GetContractSiteAddress1()
+	s = nil
+	s.GetContractSiteAddress1()
+}
+
+func TestSerialNumberDetails_GetContractSiteCity(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ContractSiteCity: &zeroValue}
+	s.GetContractSiteCity()
+	s = &SerialNumberDetails{}
+	s.GetContractSiteCity()
+	s = nil
+	s.GetContractSiteCity()
+}
+
+func TestSerialNumberDetails_GetContractSiteCountry(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ContractSiteCountry: &zeroValue}
+	s.GetContractSiteCountry()
+	s = &SerialNumberDetails{}
+	s.GetContractSiteCountry()
+	s = nil
+	s.GetContractSiteCountry()
+}
+
+func TestSerialNumberDetails_GetContractSiteCustomerName(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ContractSiteCustomerName: &zeroValue}
+	s.GetContractSiteCustomerName()
+	s = &SerialNumberDetails{}
+	s.GetContractSiteCustomerName()
+	s = nil
+	s.GetContractSiteCustomerName()
+}
+
+func TestSerialNumberDetails_GetContractSiteStateProvince(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ContractSiteStateProvince: &zeroValue}
+	s.GetContractSiteStateProvince()
+	s = &SerialNumberDetails{}
+	s.GetContractSiteStateProvince()
+	s = nil
+	s.GetContractSiteStateProvince()
+}
+
+func TestSerialNumberDetails_GetCoveredProductLineEndDate(tt *testing.T) {
+	s := &SerialNumberDetails{}
+	s.GetCoveredProductLineEndDate()
+	s = nil
+	s.GetCoveredProductLineEndDate()
+}
+
+func TestSerialNumberDetails_GetId(tt *testing.T) {
+	var zeroValue int
+	s := &SerialNumberDetails{Id: &zeroValue}
+	s.GetId()
+	s = &SerialNumberDetails{}
+	s.GetId()
+	s = nil
+	s.GetId()
+}
+
+func TestSerialNumberDetails_GetIsCovered(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{IsCovered: &zeroValue}
+	s.GetIsCovered()
+	s = &SerialNumberDetails{}
+	s.GetIsCovered()
+	s = nil
+	s.GetIsCovered()
+}
+
+func TestSerialNumberDetails_GetOrderablePidList(tt *testing.T) {
+	var zeroValue []OrderablePid
+	s := &SerialNumberDetails{OrderablePidList: &zeroValue}
+	s.GetOrderablePidList()
+	s = &SerialNumberDetails{}
+	s.GetOrderablePidList()
+	s = nil
+	s.GetOrderablePidList()
+}
+
+func TestSerialNumberDetails_GetParentSrNo(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ParentSrNo: &zeroValue}
+	s.GetParentSrNo()
+	s = &SerialNumberDetails{}
+	s.GetParentSrNo()
+	s = nil
+	s.GetParentSrNo()
+}
+
+func TestSerialNumberDetails_GetServiceContractNumber(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ServiceContractNumber: &zeroValue}
+	s.GetServiceContractNumber()
+	s = &SerialNumberDetails{}
+	s.GetServiceContractNumber()
+	s = nil
+	s.GetServiceContractNumber()
+}
+
+func TestSerialNumberDetails_GetServiceLineDescr(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{ServiceLineDescr: &zeroValue}
+	s.GetServiceLineDescr()
+	s = &SerialNumberDetails{}
+	s.GetServiceLineDescr()
+	s = nil
+	s.GetServiceLineDescr()
+}
+
+func TestSerialNumberDetails_GetSrNo(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{SrNo: &zeroValue}
+	s.GetSrNo()
+	s = &SerialNumberDetails{}
+	s.GetSrNo()
+	s = nil
+	s.GetSrNo()
+}
+
+func TestSerialNumberDetails_GetWarrantyEndDate(tt *testing.T) {
+	s := &SerialNumberDetails{}
+	s.GetWarrantyEndDate()
+	s = nil
+	s.GetWarrantyEndDate()
+}
+
+func TestSerialNumberDetails_GetWarrantyType(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{WarrantyType: &zeroValue}
+	s.GetWarrantyType()
+	s = &SerialNumberDetails{}
+	s.GetWarrantyType()
+	s = nil
+	s.GetWarrantyType()
+}
+
+func TestSerialNumberDetails_GetWarrantyTypeDescription(tt *testing.T) {
+	var zeroValue string
+	s := &SerialNumberDetails{WarrantyTypeDescription: &zeroValue}
+	s.GetWarrantyTypeDescription()
+	s = &SerialNumberDetails{}
+	s.GetWarrantyTypeDescription()
+	s = nil
+	s.GetWarrantyTypeDescription()
 }
 
 func TestSoftwareAlert_GetDeviceId(tt *testing.T) {

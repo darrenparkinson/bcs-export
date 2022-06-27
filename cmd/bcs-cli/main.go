@@ -174,6 +174,18 @@ func main() {
 							},
 						},
 					},
+					{
+						Name:  "contract",
+						Usage: "upload contract items",
+						Subcommands: []*cli.Command{
+							{
+								Name:    "serials",
+								Aliases: []string{"s", "serial"},
+								Usage:   "upload contract information per serial number",
+								Action:  uploadContractSerials,
+							},
+						},
+					},
 				},
 			},
 		},

@@ -389,6 +389,14 @@ func (c *CBPSummary) GetTotalDevices() int {
 	return *c.TotalDevices
 }
 
+// GetBasePid returns the BasePid field if it's non-nil, zero value otherwise.
+func (c *ContractBasePID) GetBasePid() string {
+	if c == nil || c.BasePid == nil {
+		return ""
+	}
+	return *c.BasePid
+}
+
 // GetCollector returns the Collector field if it's non-nil, zero value otherwise.
 func (d *Device) GetCollector() string {
 	if d == nil || d.Collector == nil {
@@ -973,6 +981,46 @@ func (l *ListOptions) GetPerPage() int {
 	return *l.PerPage
 }
 
+// GetItemDescription returns the ItemDescription field if it's non-nil, zero value otherwise.
+func (o *OrderablePid) GetItemDescription() string {
+	if o == nil || o.ItemDescription == nil {
+		return ""
+	}
+	return *o.ItemDescription
+}
+
+// GetItemPosition returns the ItemPosition field if it's non-nil, zero value otherwise.
+func (o *OrderablePid) GetItemPosition() string {
+	if o == nil || o.ItemPosition == nil {
+		return ""
+	}
+	return *o.ItemPosition
+}
+
+// GetItemType returns the ItemType field if it's non-nil, zero value otherwise.
+func (o *OrderablePid) GetItemType() string {
+	if o == nil || o.ItemType == nil {
+		return ""
+	}
+	return *o.ItemType
+}
+
+// GetOrderablePid returns the OrderablePid field if it's non-nil, zero value otherwise.
+func (o *OrderablePid) GetOrderablePid() string {
+	if o == nil || o.OrderablePid == nil {
+		return ""
+	}
+	return *o.OrderablePid
+}
+
+// GetPillarCode returns the PillarCode field if it's non-nil, zero value otherwise.
+func (o *OrderablePid) GetPillarCode() string {
+	if o == nil || o.PillarCode == nil {
+		return ""
+	}
+	return *o.PillarCode
+}
+
 // GetDeviceId returns the DeviceId field if it's non-nil, zero value otherwise.
 func (s *SecurityAdvisory) GetDeviceId() int {
 	if s == nil || s.DeviceId == nil {
@@ -1115,6 +1163,142 @@ func (s *SecurityAdvisoryBulletin) GetSir() string {
 		return ""
 	}
 	return *s.Sir
+}
+
+// GetBasePidList returns the BasePidList field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetBasePidList() []ContractBasePID {
+	if s == nil || s.BasePidList == nil {
+		return nil
+	}
+	return *s.BasePidList
+}
+
+// GetContractSiteAddress1 returns the ContractSiteAddress1 field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetContractSiteAddress1() string {
+	if s == nil || s.ContractSiteAddress1 == nil {
+		return ""
+	}
+	return *s.ContractSiteAddress1
+}
+
+// GetContractSiteCity returns the ContractSiteCity field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetContractSiteCity() string {
+	if s == nil || s.ContractSiteCity == nil {
+		return ""
+	}
+	return *s.ContractSiteCity
+}
+
+// GetContractSiteCountry returns the ContractSiteCountry field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetContractSiteCountry() string {
+	if s == nil || s.ContractSiteCountry == nil {
+		return ""
+	}
+	return *s.ContractSiteCountry
+}
+
+// GetContractSiteCustomerName returns the ContractSiteCustomerName field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetContractSiteCustomerName() string {
+	if s == nil || s.ContractSiteCustomerName == nil {
+		return ""
+	}
+	return *s.ContractSiteCustomerName
+}
+
+// GetContractSiteStateProvince returns the ContractSiteStateProvince field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetContractSiteStateProvince() string {
+	if s == nil || s.ContractSiteStateProvince == nil {
+		return ""
+	}
+	return *s.ContractSiteStateProvince
+}
+
+// GetCoveredProductLineEndDate returns the CoveredProductLineEndDate field.
+func (s *SerialNumberDetails) GetCoveredProductLineEndDate() *Date {
+	if s == nil {
+		return nil
+	}
+	return s.CoveredProductLineEndDate
+}
+
+// GetId returns the Id field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetId() int {
+	if s == nil || s.Id == nil {
+		return 0
+	}
+	return *s.Id
+}
+
+// GetIsCovered returns the IsCovered field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetIsCovered() string {
+	if s == nil || s.IsCovered == nil {
+		return ""
+	}
+	return *s.IsCovered
+}
+
+// GetOrderablePidList returns the OrderablePidList field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetOrderablePidList() []OrderablePid {
+	if s == nil || s.OrderablePidList == nil {
+		return nil
+	}
+	return *s.OrderablePidList
+}
+
+// GetParentSrNo returns the ParentSrNo field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetParentSrNo() string {
+	if s == nil || s.ParentSrNo == nil {
+		return ""
+	}
+	return *s.ParentSrNo
+}
+
+// GetServiceContractNumber returns the ServiceContractNumber field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetServiceContractNumber() string {
+	if s == nil || s.ServiceContractNumber == nil {
+		return ""
+	}
+	return *s.ServiceContractNumber
+}
+
+// GetServiceLineDescr returns the ServiceLineDescr field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetServiceLineDescr() string {
+	if s == nil || s.ServiceLineDescr == nil {
+		return ""
+	}
+	return *s.ServiceLineDescr
+}
+
+// GetSrNo returns the SrNo field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetSrNo() string {
+	if s == nil || s.SrNo == nil {
+		return ""
+	}
+	return *s.SrNo
+}
+
+// GetWarrantyEndDate returns the WarrantyEndDate field.
+func (s *SerialNumberDetails) GetWarrantyEndDate() *Date {
+	if s == nil {
+		return nil
+	}
+	return s.WarrantyEndDate
+}
+
+// GetWarrantyType returns the WarrantyType field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetWarrantyType() string {
+	if s == nil || s.WarrantyType == nil {
+		return ""
+	}
+	return *s.WarrantyType
+}
+
+// GetWarrantyTypeDescription returns the WarrantyTypeDescription field if it's non-nil, zero value otherwise.
+func (s *SerialNumberDetails) GetWarrantyTypeDescription() string {
+	if s == nil || s.WarrantyTypeDescription == nil {
+		return ""
+	}
+	return *s.WarrantyTypeDescription
 }
 
 // GetDeviceId returns the DeviceId field if it's non-nil, zero value otherwise.
