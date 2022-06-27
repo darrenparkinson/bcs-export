@@ -83,6 +83,18 @@ func main() {
 						Usage:   "list assets",
 						Action:  listAssets,
 					},
+					{
+						Name:    "risk-summaries",
+						Aliases: []string{"rs"},
+						Usage:   "list risk mitigation summaries",
+						Action:  listRiskMitigationSummaries,
+					},
+					{
+						Name:    "risk-details",
+						Aliases: []string{"rd"},
+						Usage:   "list risk mitigation details",
+						Action:  listRiskMitigationDetails,
+					},
 				},
 			},
 			{
@@ -183,6 +195,25 @@ func main() {
 								Aliases: []string{"s", "serial"},
 								Usage:   "upload contract information per serial number",
 								Action:  uploadContractSerials,
+							},
+						},
+					},
+					{
+						Name:    "risk-mitigation",
+						Aliases: []string{"r"},
+						Usage:   "upload risk mitigation items",
+						Subcommands: []*cli.Command{
+							{
+								Name:    "summaries",
+								Aliases: []string{"s", "summary"},
+								Usage:   "upload risk mitigation summaries",
+								Action:  uploadRiskMigitationSummaries,
+							},
+							{
+								Name:    "details",
+								Aliases: []string{"d", "detail"},
+								Usage:   "upload risk mitigation details",
+								Action:  uploadRiskMigitationDetails,
 							},
 						},
 					},

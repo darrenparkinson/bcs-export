@@ -1223,6 +1223,136 @@ func TestOrderablePid_GetPillarCode(tt *testing.T) {
 	o.GetPillarCode()
 }
 
+func TestRiskMitigationDetails_GetDeviceId(tt *testing.T) {
+	var zeroValue int
+	r := &RiskMitigationDetails{DeviceId: &zeroValue}
+	r.GetDeviceId()
+	r = &RiskMitigationDetails{}
+	r.GetDeviceId()
+	r = nil
+	r.GetDeviceId()
+}
+
+func TestRiskMitigationDetails_GetDeviceIp(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{DeviceIp: &zeroValue}
+	r.GetDeviceIp()
+	r = &RiskMitigationDetails{}
+	r.GetDeviceIp()
+	r = nil
+	r.GetDeviceIp()
+}
+
+func TestRiskMitigationDetails_GetDeviceName(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{DeviceName: &zeroValue}
+	r.GetDeviceName()
+	r = &RiskMitigationDetails{}
+	r.GetDeviceName()
+	r = nil
+	r.GetDeviceName()
+}
+
+func TestRiskMitigationDetails_GetProductFamily(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{ProductFamily: &zeroValue}
+	r.GetProductFamily()
+	r = &RiskMitigationDetails{}
+	r.GetProductFamily()
+	r = nil
+	r.GetProductFamily()
+}
+
+func TestRiskMitigationDetails_GetProductId(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{ProductId: &zeroValue}
+	r.GetProductId()
+	r = &RiskMitigationDetails{}
+	r.GetProductId()
+	r = nil
+	r.GetProductId()
+}
+
+func TestRiskMitigationDetails_GetRiskCategory(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{RiskCategory: &zeroValue}
+	r.GetRiskCategory()
+	r = &RiskMitigationDetails{}
+	r.GetRiskCategory()
+	r = nil
+	r.GetRiskCategory()
+}
+
+func TestRiskMitigationDetails_GetRiskScore(tt *testing.T) {
+	var zeroValue float32
+	r := &RiskMitigationDetails{RiskScore: &zeroValue}
+	r.GetRiskScore()
+	r = &RiskMitigationDetails{}
+	r.GetRiskScore()
+	r = nil
+	r.GetRiskScore()
+}
+
+func TestRiskMitigationDetails_GetSwType(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{SwType: &zeroValue}
+	r.GetSwType()
+	r = &RiskMitigationDetails{}
+	r.GetSwType()
+	r = nil
+	r.GetSwType()
+}
+
+func TestRiskMitigationDetails_GetSwVersion(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationDetails{SwVersion: &zeroValue}
+	r.GetSwVersion()
+	r = &RiskMitigationDetails{}
+	r.GetSwVersion()
+	r = nil
+	r.GetSwVersion()
+}
+
+func TestRiskMitigationSummary_GetHighRiskDeviceCount(tt *testing.T) {
+	var zeroValue int
+	r := &RiskMitigationSummary{HighRiskDeviceCount: &zeroValue}
+	r.GetHighRiskDeviceCount()
+	r = &RiskMitigationSummary{}
+	r.GetHighRiskDeviceCount()
+	r = nil
+	r.GetHighRiskDeviceCount()
+}
+
+func TestRiskMitigationSummary_GetLowRiskDeviceCount(tt *testing.T) {
+	var zeroValue int
+	r := &RiskMitigationSummary{LowRiskDeviceCount: &zeroValue}
+	r.GetLowRiskDeviceCount()
+	r = &RiskMitigationSummary{}
+	r.GetLowRiskDeviceCount()
+	r = nil
+	r.GetLowRiskDeviceCount()
+}
+
+func TestRiskMitigationSummary_GetMediumRiskDeviceCount(tt *testing.T) {
+	var zeroValue int
+	r := &RiskMitigationSummary{MediumRiskDeviceCount: &zeroValue}
+	r.GetMediumRiskDeviceCount()
+	r = &RiskMitigationSummary{}
+	r.GetMediumRiskDeviceCount()
+	r = nil
+	r.GetMediumRiskDeviceCount()
+}
+
+func TestRiskMitigationSummary_GetProductFamily(tt *testing.T) {
+	var zeroValue string
+	r := &RiskMitigationSummary{ProductFamily: &zeroValue}
+	r.GetProductFamily()
+	r = &RiskMitigationSummary{}
+	r.GetProductFamily()
+	r = nil
+	r.GetProductFamily()
+}
+
 func TestSecurityAdvisory_GetDeviceId(tt *testing.T) {
 	var zeroValue int
 	s := &SecurityAdvisory{DeviceId: &zeroValue}
@@ -1831,4 +1961,108 @@ func TestSoftwareEOXBulletin_GetSwType(tt *testing.T) {
 	s.GetSwType()
 	s = nil
 	s.GetSwType()
+}
+
+func TestSyslogDaily_GetDate(tt *testing.T) {
+	s := &SyslogDaily{}
+	s.GetDate()
+	s = nil
+	s.GetDate()
+}
+
+func TestSyslogDaily_GetDescription(tt *testing.T) {
+	var zeroValue string
+	s := &SyslogDaily{Description: &zeroValue}
+	s.GetDescription()
+	s = &SyslogDaily{}
+	s.GetDescription()
+	s = nil
+	s.GetDescription()
+}
+
+func TestSyslogDaily_GetIcseverity(tt *testing.T) {
+	var zeroValue string
+	s := &SyslogDaily{Icseverity: &zeroValue}
+	s.GetIcseverity()
+	s = &SyslogDaily{}
+	s.GetIcseverity()
+	s = nil
+	s.GetIcseverity()
+}
+
+func TestSyslogDaily_GetMsgtype(tt *testing.T) {
+	var zeroValue string
+	s := &SyslogDaily{Msgtype: &zeroValue}
+	s.GetMsgtype()
+	s = &SyslogDaily{}
+	s.GetMsgtype()
+	s = nil
+	s.GetMsgtype()
+}
+
+func TestSyslogDaily_GetRecommendation(tt *testing.T) {
+	var zeroValue string
+	s := &SyslogDaily{Recommendation: &zeroValue}
+	s.GetRecommendation()
+	s = &SyslogDaily{}
+	s.GetRecommendation()
+	s = nil
+	s.GetRecommendation()
+}
+
+func TestSyslogDaily_GetSeverity(tt *testing.T) {
+	var zeroValue int
+	s := &SyslogDaily{Severity: &zeroValue}
+	s.GetSeverity()
+	s = &SyslogDaily{}
+	s.GetSeverity()
+	s = nil
+	s.GetSeverity()
+}
+
+func TestSyslogDaily_GetTimestamp(tt *testing.T) {
+	s := &SyslogDaily{}
+	s.GetTimestamp()
+	s = nil
+	s.GetTimestamp()
+}
+
+func TestSyslogDaily_GetTotal(tt *testing.T) {
+	var zeroValue int
+	s := &SyslogDaily{Total: &zeroValue}
+	s.GetTotal()
+	s = &SyslogDaily{}
+	s.GetTotal()
+	s = nil
+	s.GetTotal()
+}
+
+func TestSyslogDevice_GetDevice(tt *testing.T) {
+	var zeroValue string
+	s := &SyslogDevice{Device: &zeroValue}
+	s.GetDevice()
+	s = &SyslogDevice{}
+	s.GetDevice()
+	s = nil
+	s.GetDevice()
+}
+
+func TestSyslogDevice_GetDeviceId(tt *testing.T) {
+	var zeroValue int
+	s := &SyslogDevice{DeviceId: &zeroValue}
+	s.GetDeviceId()
+	s = &SyslogDevice{}
+	s.GetDeviceId()
+	s = nil
+	s.GetDeviceId()
+}
+
+func TestSyslogDevice_GetEvents(tt *testing.T) {
+	var zeroValue int
+	s := &SyslogDevice{Events: &zeroValue}
+	s.GetEvents()
+	s = &SyslogDevice{}
+	s.GetEvents()
+	s = nil
+	s.GetEvents()
 }

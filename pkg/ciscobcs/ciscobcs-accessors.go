@@ -1022,6 +1022,110 @@ func (o *OrderablePid) GetPillarCode() string {
 }
 
 // GetDeviceId returns the DeviceId field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetDeviceId() int {
+	if r == nil || r.DeviceId == nil {
+		return 0
+	}
+	return *r.DeviceId
+}
+
+// GetDeviceIp returns the DeviceIp field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetDeviceIp() string {
+	if r == nil || r.DeviceIp == nil {
+		return ""
+	}
+	return *r.DeviceIp
+}
+
+// GetDeviceName returns the DeviceName field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetDeviceName() string {
+	if r == nil || r.DeviceName == nil {
+		return ""
+	}
+	return *r.DeviceName
+}
+
+// GetProductFamily returns the ProductFamily field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetProductFamily() string {
+	if r == nil || r.ProductFamily == nil {
+		return ""
+	}
+	return *r.ProductFamily
+}
+
+// GetProductId returns the ProductId field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetProductId() string {
+	if r == nil || r.ProductId == nil {
+		return ""
+	}
+	return *r.ProductId
+}
+
+// GetRiskCategory returns the RiskCategory field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetRiskCategory() string {
+	if r == nil || r.RiskCategory == nil {
+		return ""
+	}
+	return *r.RiskCategory
+}
+
+// GetRiskScore returns the RiskScore field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetRiskScore() float32 {
+	if r == nil || r.RiskScore == nil {
+		return 0
+	}
+	return *r.RiskScore
+}
+
+// GetSwType returns the SwType field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetSwType() string {
+	if r == nil || r.SwType == nil {
+		return ""
+	}
+	return *r.SwType
+}
+
+// GetSwVersion returns the SwVersion field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationDetails) GetSwVersion() string {
+	if r == nil || r.SwVersion == nil {
+		return ""
+	}
+	return *r.SwVersion
+}
+
+// GetHighRiskDeviceCount returns the HighRiskDeviceCount field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationSummary) GetHighRiskDeviceCount() int {
+	if r == nil || r.HighRiskDeviceCount == nil {
+		return 0
+	}
+	return *r.HighRiskDeviceCount
+}
+
+// GetLowRiskDeviceCount returns the LowRiskDeviceCount field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationSummary) GetLowRiskDeviceCount() int {
+	if r == nil || r.LowRiskDeviceCount == nil {
+		return 0
+	}
+	return *r.LowRiskDeviceCount
+}
+
+// GetMediumRiskDeviceCount returns the MediumRiskDeviceCount field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationSummary) GetMediumRiskDeviceCount() int {
+	if r == nil || r.MediumRiskDeviceCount == nil {
+		return 0
+	}
+	return *r.MediumRiskDeviceCount
+}
+
+// GetProductFamily returns the ProductFamily field if it's non-nil, zero value otherwise.
+func (r *RiskMitigationSummary) GetProductFamily() string {
+	if r == nil || r.ProductFamily == nil {
+		return ""
+	}
+	return *r.ProductFamily
+}
+
+// GetDeviceId returns the DeviceId field if it's non-nil, zero value otherwise.
 func (s *SecurityAdvisory) GetDeviceId() int {
 	if s == nil || s.DeviceId == nil {
 		return 0
@@ -1531,4 +1635,92 @@ func (s *SoftwareEOXBulletin) GetSwType() string {
 		return ""
 	}
 	return *s.SwType
+}
+
+// GetDate returns the Date field.
+func (s *SyslogDaily) GetDate() *Date {
+	if s == nil {
+		return nil
+	}
+	return s.Date
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetDescription() string {
+	if s == nil || s.Description == nil {
+		return ""
+	}
+	return *s.Description
+}
+
+// GetIcseverity returns the Icseverity field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetIcseverity() string {
+	if s == nil || s.Icseverity == nil {
+		return ""
+	}
+	return *s.Icseverity
+}
+
+// GetMsgtype returns the Msgtype field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetMsgtype() string {
+	if s == nil || s.Msgtype == nil {
+		return ""
+	}
+	return *s.Msgtype
+}
+
+// GetRecommendation returns the Recommendation field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetRecommendation() string {
+	if s == nil || s.Recommendation == nil {
+		return ""
+	}
+	return *s.Recommendation
+}
+
+// GetSeverity returns the Severity field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetSeverity() int {
+	if s == nil || s.Severity == nil {
+		return 0
+	}
+	return *s.Severity
+}
+
+// GetTimestamp returns the Timestamp field.
+func (s *SyslogDaily) GetTimestamp() *DateTime {
+	if s == nil {
+		return nil
+	}
+	return s.Timestamp
+}
+
+// GetTotal returns the Total field if it's non-nil, zero value otherwise.
+func (s *SyslogDaily) GetTotal() int {
+	if s == nil || s.Total == nil {
+		return 0
+	}
+	return *s.Total
+}
+
+// GetDevice returns the Device field if it's non-nil, zero value otherwise.
+func (s *SyslogDevice) GetDevice() string {
+	if s == nil || s.Device == nil {
+		return ""
+	}
+	return *s.Device
+}
+
+// GetDeviceId returns the DeviceId field if it's non-nil, zero value otherwise.
+func (s *SyslogDevice) GetDeviceId() int {
+	if s == nil || s.DeviceId == nil {
+		return 0
+	}
+	return *s.DeviceId
+}
+
+// GetEvents returns the Events field if it's non-nil, zero value otherwise.
+func (s *SyslogDevice) GetEvents() int {
+	if s == nil || s.Events == nil {
+		return 0
+	}
+	return *s.Events
 }
